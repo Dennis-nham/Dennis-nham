@@ -32,7 +32,7 @@ Nhấn nút **[Sponsor]** tại đầu trang kho lưu trữ của chúng tôi đ
 * [![Open Collective](https://img.shields.io/badge/Open_Collective-Donate-7fadf2?style=flat-square&logo=opencollective&logoColor=white)](https://opencollective.com/Dennis-nham) : Theo dõi và đóng góp minh bạch tài chính cho các dự án tại trang Open Collective của chúng tôi.
 * [![Ko-fi](https://img.shields.io/badge/Ko--fi-Support-ff5e5b?style=flat-square&logo=kofi&logoColor=white)](https://ko-fi.com/Dennis-nham) / [![Buy Me a Coffee](https://img.shields.io/badge/Buy_Me_a_Coffee-Donate-yellow?style=flat-square&logo=buymeacoffee&logoColor=black)](https://buymeacoffee.com/Dennis-nham) / [![Patreon](https://img.shields.io/badge/Patreon-Support-f96854?style=flat-square&logo=patreon&logoColor=white)](https://patreon.com/Dennis-nham) : Hỗ trợ nhanh chóng qua các cổng thanh toán cá nhân.
 * **Custom Funding:** Liên hệ trực tiếp qua kênh chính thức của tổ chức để trao đổi các gói tài trợ doanh nghiệp hoặc hợp tác chiến lược (Strategic Sponsorship).
-
+  
 ---
 
 ## 🤝 Tham gia đóng góp (Contributing)
