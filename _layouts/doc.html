@@ -1,0 +1,95 @@
+---
+layout: default
+---
+{% assign current = page.url %}
+
+<div class="page-wrap">
+
+  <!-- Sidebar -->
+  <aside class="sidebar">
+    <div class="sidebar-section">
+      <div class="sidebar-heading">Tài liệu</div>
+      {% for item in site.nav %}
+      <a href="{{ item.url | relative_url }}"
+         class="sidebar-link {% if current == item.url %}active{% endif %}">
+        <span class="sidebar-icon">{{ item.icon }}</span>
+        {{ item.title }}
+      </a>
+      {% endfor %}
+    </div>
+
+    <div class="sidebar-section" style="margin-top: 24px;">
+      <div class="sidebar-heading">Liên kết nhanh</div>
+      <a href="https://github.com/nlp-labs-vietnam" class="sidebar-link">
+        <span class="sidebar-icon">🏢</span>NLP Labs Vietnam
+      </a>
+      <a href="https://github.com/Dennis-nham" class="sidebar-link">
+        <span class="sidebar-icon">👤</span>@Dennis-nham
+      </a>
+      <a href="https://github.com/sponsors/Dennis-nham" class="sidebar-link">
+        <span class="sidebar-icon">💚</span>GitHub Sponsors
+      </a>
+      <a href="https://nlpgroup.vn" class="sidebar-link">
+        <span class="sidebar-icon">🌐</span>nlpgroup.vn
+      </a>
+    </div>
+  </aside>
+
+  <!-- Main content -->
+  <main class="content">
+    {% if page.breadcrumb %}
+    <nav class="breadcrumb" aria-label="Breadcrumb">
+      <a href="{{ '/' | relative_url }}">Trang chủ</a>
+      <span class="breadcrumb-sep">›</span>
+      {% for crumb in page.breadcrumb %}
+        {% if forloop.last %}
+          <span>{{ crumb.title }}</span>
+        {% else %}
+          <a href="{{ crumb.url | relative_url }}">{{ crumb.title }}</a>
+          <span class="breadcrumb-sep">›</span>
+        {% endif %}
+      {% endfor %}
+    </nav>
+    {% endif %}
+
+    {% if page.tags %}
+    <div style="margin-bottom: 12px;">
+      {% for tag in page.tags %}
+      <span class="tag tag-{{ tag.color | default: 'blue' }}">{{ tag.name }}</span>
+      {% endfor %}
+    </div>
+    {% endif %}
+
+    <div class="page-meta">
+      {% if page.author %}<span class="page-meta-item">✍️ {{ page.author }}</span>{% endif %}
+      {% if page.date %}<span class="page-meta-item">📅 {{ page.date | date: "%d/%m/%Y" }}</span>{% endif %}
+      {% if page.version %}<span class="page-meta-item">🏷 v{{ page.version }}</span>{% endif %}
+      {% if page.okr %}<span class="page-meta-item">🎯 {{ page.okr }}</span>{% endif %}
+    </div>
+
+    {{ content }}
+
+    <!-- Prev / Next navigation -->
+    <div style="display: flex; justify-content: space-between; margin-top: 48px; padding-top: 24px; border-top: 1px solid var(--color-border-muted); font-size: 14px; gap: 16px;">
+      {% if page.prev %}
+      <a href="{{ page.prev.url | relative_url }}" style="display: flex; flex-direction: column; gap: 2px; max-width: 48%;">
+        <span style="font-size: 11px; text-transform: uppercase; letter-spacing: .04em; color: var(--color-fg-muted);">← Trang trước</span>
+        <span style="color: var(--color-accent-fg);">{{ page.prev.title }}</span>
+      </a>
+      {% else %}<div></div>{% endif %}
+
+      {% if page.next %}
+      <a href="{{ page.next.url | relative_url }}" style="display: flex; flex-direction: column; gap: 2px; text-align: right; max-width: 48%;">
+        <span style="font-size: 11px; text-transform: uppercase; letter-spacing: .04em; color: var(--color-fg-muted);">Trang sau →</span>
+        <span style="color: var(--color-accent-fg);">{{ page.next.title }}</span>
+      </a>
+      {% else %}<div></div>{% endif %}
+    </div>
+
+    <div style="margin-top: 32px; padding: 12px 16px; background: var(--color-canvas-subtle); border-radius: var(--radius-md); font-size: 13px; color: var(--color-fg-muted); border: 1px solid var(--color-border-muted);">
+      💡 Bạn thấy thông tin không chính xác?
+      <a href="https://github.com/Dennis-nham/Dennis-nham/edit/main/{{ page.path }}">Chỉnh sửa trang này trên GitHub</a>
+    </div>
+  </main>
+
+</div>

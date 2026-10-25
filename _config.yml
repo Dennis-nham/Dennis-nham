@@ -1,0 +1,78 @@
+title: "Dennis-nham · NLP Labs Vietnam"
+description: "Open-source AI for Clean Energy · EV Charging · Vietnamese NLP · Financial Intelligence"
+url: "https://dennis-nham.github.io"
+baseurl: "/Dennis-nham"
+
+# Author
+author:
+  name: "NHAM QUOC HUAN"
+  email: "enterprise@nlpgroup.vn"
+  github: "Dennis-nham"
+  twitter: "NhamDennis"
+
+# Jekyll build
+markdown: kramdown
+highlighter: rouge
+theme: minima
+
+kramdown:
+  input: GFM
+  syntax_highlighter: rouge
+  syntax_highlighter_opts:
+    css_class: "highlight"
+    span:
+      line_numbers: false
+    block:
+      line_numbers: true
+
+# Sass
+sass:
+  style: compressed
+
+# Plugins
+plugins:
+  - jekyll-feed
+  - jekyll-sitemap
+  - jekyll-seo-tag
+
+# Collections
+collections:
+  docs:
+    output: true
+    permalink: /:collection/:name/
+
+defaults:
+  - scope:
+      path: ""
+      type: "docs"
+    values:
+      layout: "doc"
+
+# Navigation
+nav:
+  - title: "Bắt đầu"
+    url: "/docs/get-started/"
+    icon: "🚀"
+  - title: "Kiến trúc"
+    url: "/docs/architecture/"
+    icon: "🗺"
+  - title: "OSS Roadmap"
+    url: "/docs/oss-roadmap/"
+    icon: "🌐"
+  - title: "Tài trợ"
+    url: "/docs/sponsorship/"
+    icon: "💚"
+  - title: "White Paper"
+    url: "/docs/white-paper/"
+    icon: "📄"
+  - title: "Đóng góp"
+    url: "/docs/contributing/"
+    icon: "🤝"
+
+# Exclude
+exclude:
+  - Gemfile
+  - Gemfile.lock
+  - node_modules
+  - scripts/
+  - "*.sh"
